@@ -1,0 +1,83 @@
+#root{
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+/* -------------------------- COMMON --------------------------------- */
+
+a{
+    text-decoration: none;
+}
+
+/* -------------------------- NAVBAR --------------------------------- */
+
+.Navbar{
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.actualNavbar{
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.Navbar img{
+    height: 60px;
+}
+
+.navLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    column-gap: 1.5em;
+}
+
+.navLinks a{
+    font-weight: 700;
+    background: linear-gradient(90deg, rgb(255, 93, 236), rgb(186, 88, 252));
+    background-clip: text;
+    color: transparent;
+    transition: all 0.5s;
+}
+
+.navLinks a:hover{
+    letter-spacing: 0.05em;
+    scale: 1.1;
+    background: linear-gradient(90deg, rgb(186, 88, 252), rgb(255, 93, 236));
+    background-clip: text;
+    color: transparent;
+}
+
+/* ------------------------------ CAROUSEL -------------------------------- */
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 1s ease;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: auto;
+  }
+  
