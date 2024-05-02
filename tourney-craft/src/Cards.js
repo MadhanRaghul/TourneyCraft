@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Cards = () => {
+const Cards = (props) => {
   return (
     <div className='Cards'>
-        
+        <div className='cardHolder'>
+          <img src={props.image} alt="cant load the image" />
+          <h3>{props.type}</h3>
+          <Link to="/Elite8">Create!</Link>
+        </div>
     </div>
   )
 }
 
-export default Cards
+export default Cards;
