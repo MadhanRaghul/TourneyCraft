@@ -1,4 +1,3 @@
-// Elite8.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -51,6 +50,14 @@ const Elite8 = () => {
   };
 
   const handleCreate = () => {
+    // Clear localStorage for q1, q2, q3, q4, f1, and f2
+    localStorage.removeItem('q1');
+    localStorage.removeItem('q2');
+    localStorage.removeItem('q3');
+    localStorage.removeItem('q4');
+    localStorage.removeItem('f1');
+    localStorage.removeItem('f2');
+
     const elite8Data = { name, one, two, three, four, five, six, seven, eight };
     localStorage.setItem('elite8Data', JSON.stringify(elite8Data));
     navigate('/tourney8');

@@ -19,8 +19,8 @@ const Navbar = () => {
       </div>
 
       <Routes>
-        <Route path='/' element={<Welcome />}/>
-        <Route path='/elite8' element={<Elite8 />}/>
+        <Route path='/welcome' element={<Welcome />}/>
+       {/*  <Route path='/elite8' element={<Elite8 />}/> */}
       </Routes>
 
       

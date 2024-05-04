@@ -10,7 +10,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Elite8 />} />
+        <Route path="/elite8" element={<Elite8 />} />
         <Route path="/tourney8" element={<Tourney8 />} />
       </Routes>
 
