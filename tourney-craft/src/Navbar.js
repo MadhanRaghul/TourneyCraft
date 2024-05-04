@@ -1,17 +1,31 @@
-import React from 'react'
-import Welcome from './Welcome'
-import Elite8 from './Elite8'
-import { Routes, Route, Link } from 'react-router-dom'
+import React from 'react';
+import Welcome from './Welcome';
+import Elite8 from './Elite8';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  // Get the current location
+  const location = useLocation();
+
+  // Function to handle scrolling to the Home component
+  const scrollToHome = () => {
+    const homeElement = document.getElementById('create');
+    if (homeElement) {
+      homeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <div className='Navbar'>
           <div className='actualNavbar'>
               <img src="/logo.png" alt="TourneyCraft Logo" />
               <div className='navLinks'>
+                  {/* Conditionally render the Create link based on the current location */}
                   <Link to="/">Home</Link>
-                  <Link to="/elite8">Create</Link>
+                  {location.pathname === "/" && (
+                    <Link to="" onClick={scrollToHome}>Create</Link>
+                  )}
                   <Link to="">Tourneys</Link>
                   <Link to="">Contact</Link>
               </div>
@@ -19,13 +33,11 @@ const Navbar = () => {
       </div>
 
       <Routes>
-        <Route path='/welcome' element={<Welcome />}/>
-       {/*  <Route path='/elite8' element={<Elite8 />}/> */}
+        <Route path='/' element={<Welcome />} />
+        
       </Routes>
-
-      
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

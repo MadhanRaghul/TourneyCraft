@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className='Home'>
+    <div className='Home' id='create'>
 
             <div className='heading'>
               <h1>Make your own Tourney!</h1>
