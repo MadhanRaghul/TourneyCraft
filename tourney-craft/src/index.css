@@ -177,6 +177,7 @@ a{
     border: 1px solid rgb(0, 0, 0);
     height: 80vh;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .cont{
@@ -203,10 +204,15 @@ a{
 .match:hover{
     scale: 1.05;
     box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.473);
-
 }
 
 hr{
     border-color: rgba(0, 0, 0, 0.242);
     border-width: 1px;
 }
+
+.popup{
+    position: absolute;
+    background-color: black;
+}
+
