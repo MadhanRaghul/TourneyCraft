@@ -238,3 +238,46 @@ hr{
 .pops h2{
     cursor: pointer;
 }
+
+.winner{
+    position: absolute;
+    z-index: 3;
+    height: 50vh;
+    width: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgb(255, 93, 236), rgb(186, 88, 252) ) 1;
+    background-image: linear-gradient(to top right, rgb(186, 88, 252), rgb(255, 93, 236));
+    box-shadow: -17px 17px 17px rgba(0, 0, 0, 0.473);
+    animation-name: animeWinner;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation: introWinner 1s forwards;
+}
+
+@keyframes introWinner{
+    from{
+        opacity: 0;
+        scale: .5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes animeWinner{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+}
