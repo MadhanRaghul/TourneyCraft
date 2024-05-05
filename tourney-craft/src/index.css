@@ -17,11 +17,16 @@ a{
 /* -------------------------- NAVBAR --------------------------------- */
 
 .Navbar{
-    background-color: rgb(0, 0, 0);
     width: 100vw;
     display: flex;
     justify-content: center;
-    z-index: 1;
+    z-index: 5;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.743), rgb(255, 169, 248));
+    backdrop-filter: blur(1px); /* Apply blur effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.459);
 }
 
 .actualNavbar{
@@ -57,7 +62,8 @@ a{
 .navLinks a:hover{
     letter-spacing: 0.05em;
     scale: 1.1;
-    background: linear-gradient(90deg, rgb(186, 88, 252), rgb(255, 93, 236));
+    background: linear-gradient(90deg, rgb(255, 93, 236), rgb(186, 88, 252));
+    text-shadow: 1.5px -1.5px rgba(255, 255, 255, 0.904);
     background-clip: text;
     color: transparent;
 }
@@ -111,7 +117,31 @@ a{
     border-image: linear-gradient(to right, rgb(255, 93, 236), rgb(186, 88, 252) ) 1;
     transition: all 0.5s;
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.473);
+    position: relative;
+    overflow: hidden;
+}
 
+@keyframes ashine {
+    0% {left: -300px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+
+
+.cardHolder:before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 40%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -150px;
+    animation: ashine 3s infinite linear; /* Animation */
 }
 
 .cardHolder:hover{
@@ -132,18 +162,19 @@ a{
     background-color: black;
     color: white;
     border-style: solid;
+    border-width: 3px;
     border-color: black;
     padding: 2%;
     height: 30%;
-    transition: all 0.5s;
+    transition: all 0.3s;
+    border-radius: 5px;
 }
 
 .cardHolder a:hover{
-    border-image: linear-gradient(to right, rgb(255, 93, 236), rgb(186, 88, 252) ) 1;
-    background-color: black;
-    background: linear-gradient(90deg, rgb(255, 93, 236), rgb(186, 88, 252));
-    background-clip: text;
-    color: transparent;
+    background-color: transparent;
+    color: black;
+    scale: 2;
+
 }
 
 /* -------------------------------- ELITE8 ----------------------------------- */
@@ -160,7 +191,7 @@ a{
 /* ------------------------------- TOURNEY8 ---------------------------------- */
 
 .Tourney8{
-    height: 100vh;
+    height: 120vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -174,10 +205,13 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1vh;
     height: 80vh;
     justify-content: space-evenly;
     position: relative;
+    overflow: scroll;
+    padding: 5vh;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5) inset;
 }
 
 .cont{
@@ -199,6 +233,30 @@ a{
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.473);
     cursor: pointer;
     transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.match::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+
+@keyframes shine {
+    0% {left: -200px}
+    20% {left: 100%}
+    100% {left: 100%}
 }
 
 .match:hover{
@@ -248,36 +306,51 @@ hr{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-width: 4px;
-    border-style: solid;
-    border-image: linear-gradient(to right, rgb(255, 93, 236), rgb(186, 88, 252) ) 1;
-    background-image: linear-gradient(to top right, rgb(186, 88, 252), rgb(255, 93, 236));
+    border-radius: 20px;    
     box-shadow: -17px 17px 17px rgba(0, 0, 0, 0.473);
-    animation-name: animeWinner;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation: introWinner 1s forwards;
+    animation-name: animeWinner, introWinner;
+    animation-duration: 2s, 2s;
+    animation-iteration-count: infinite, 1;
+    animation-fill-mode: none, forwards;
+    background-image: linear-gradient(to top right, rgba(255, 93, 236, 0.437), rgba(229, 118, 253, 0.372));
+    backdrop-filter: blur(10px); /* Apply blur effect */
+
 }
 
-@keyframes introWinner{
-    from{
-        opacity: 0;
-        scale: .5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
+.winner img{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: .5;
 }
 
 @keyframes animeWinner{
     0%{
-        scale: 1;
+        transform: translateY(0);
     }
     50%{
+        transform: translateY(-2vh);
+
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes introWinner{
+    0%{
+        opacity: 0;
+        scale: 0.5;
+    }
+    20%{
+        opacity: 1;
         scale: 1.05;
     }
     100%{
         scale: 1;
     }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
 }

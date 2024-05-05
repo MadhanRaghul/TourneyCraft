@@ -11,7 +11,8 @@ const Tourney8 = () => {
   const [f2, setF2] = useState(localStorage.getItem('f2') || 'TBD');
 
   const [showPops, setShowPops] = useState(false); // State to control visibility of pops div
-  const [showWinner, setShowWinner] = useState(false); // State to control visibility of pops div
+  const [showWinner1, setShowWinner1] = useState(false); // State to control visibility of pops div
+  const [showWinner2, setShowWinner2] = useState(false); // State to control visibility of pops div
 
 
   useEffect(() => {
@@ -86,8 +87,12 @@ const Tourney8 = () => {
     setShowPops(true); // Set showPops state to true when finals div is clicked
   };
 
-  const handleWinner = () => {
-    setShowWinner(true); // Set showPops state to true when finals div is clicked
+  const handleWinner1 = () => {
+    setShowWinner1(true); // Set showPops state to true when finals div is clicked
+  };
+
+  const handleWinner2 = () => {
+    setShowWinner2(true); // Set showPops state to true when finals div is clicked
   };
 
   return (
@@ -139,19 +144,32 @@ const Tourney8 = () => {
           {showPops && (
             <div className='pops'>
               <h1>Who is the Winner?</h1>
-              <h2 onClick={handleWinner}>{f1}</h2>
+              <h2 onClick={handleWinner1}>{f1}</h2>
               <h3>vs</h3>
-              <h2>{f2}</h2>
+              <h2 onClick={handleWinner2}>{f2}</h2>
             </div>
           )}
 
-          {showWinner && (
+          {showWinner1 && (
             <div className='winner'>
               <h2>And the Winner is...</h2>
               <h1>{f1}</h1>
               <h2>CONGRATULATIONS!!</h2>
+              <img src="/party.gif" alt="" />
+              <img src="/Fireworks.gif" alt="" />
             </div>
           )}
+
+          {showWinner2 && (
+            <div className='winner'>
+              <h2>And the Winner is...</h2>
+              <h1>{f2}</h1>
+              <h2>CONGRATULATIONS!!</h2>
+              <img src="/party.gif" alt="" />
+              <img src="/Fireworks.gif" alt="" />
+            </div>
+          )}
+          
 
         </>
       ) : (
