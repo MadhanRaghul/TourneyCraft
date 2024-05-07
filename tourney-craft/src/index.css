@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: linear-gradient(to top right, rgb(255, 93, 236), rgba(186, 88, 252, 0.223));
+
 }
 
 body{
@@ -96,7 +98,6 @@ a{
     align-items: center;
     text-align: center;
     color: rgb(255, 255, 255);
-    background-image: linear-gradient(to top right, rgb(255, 93, 236), rgba(186, 88, 252, 0.223));
 }
   
 .cards{
@@ -180,12 +181,53 @@ a{
 /* -------------------------------- ELITE8 ----------------------------------- */
 
 .Elite8{
-    height: 100vh;
+    margin-top: 5vh;
+    height: 120vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 5vh;
+}
+
+.nameBar{
     background-color: rgb(255, 255, 255);
+    border-style: none;
+    font-size: 2em;
+    padding: 2vh;
+    width: 25vw;
+}
+
+.table{
+    text-align: center;
+}
+
+.table td{
+    background-color: #ffffff;
+    font-size: 1.1em;
+    padding: 1vh;
+}
+
+.table th{
+    background-color: rgb(255, 255, 255);
+    padding: 2vh;
+    font-size: 1.5em;
+}
+
+.table input[type='text']{
+    border-style: none;
+    font-size: 1em;
+    padding: 1vh;
+    width: 20vw;
+}
+
+.Elite8 button{
+    width: 27vw;
+    font-size: 2em;
+    padding: 1vh;
+    border-style: none;
+    background-color: white;
+    cursor: pointer;
 }
 
 /* ------------------------------- TOURNEY8 ---------------------------------- */
@@ -197,7 +239,6 @@ a{
     flex-direction: column;
     align-items: center;
     color: rgb(0, 0, 0);
-    background-image: linear-gradient(to top right, rgb(255, 112, 248), rgba(248, 116, 255, 0.186));
 }
 
 .container{

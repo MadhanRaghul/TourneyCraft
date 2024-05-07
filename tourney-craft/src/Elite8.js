@@ -49,7 +49,8 @@ const Elite8 = () => {
     }
   };
 
-  const handleCreate = () => {
+  const handleCreate = (event) => {
+    event.preventDefault(); // Prevent default form submission
     // Clear localStorage for q1, q2, q3, q4, f1, and f2
     localStorage.removeItem('q1');
     localStorage.removeItem('q2');
@@ -65,53 +66,55 @@ const Elite8 = () => {
 
   return (
     <div className='Elite8'>
-        <h1>ELITE EIGHT</h1>
-        <input type="text" value={name} placeholder='Type the name...' required onChange={handleName} />
-        <div className='table'>
-          <table border="1">
-              <thead>
-                <tr>
-                  <th>S.no</th>
-                  <th>Team</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><input type="text" name="one" value={one} onChange={handleTeam} required/></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><input type="text" name="two" value={two} onChange={handleTeam} required/></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><input type="text" name="three" value={three} onChange={handleTeam} required/></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td><input type="text" name="four" value={four} onChange={handleTeam} required/></td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td><input type="text" name="five" value={five} onChange={handleTeam} required/></td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td><input type="text" name="six" value={six} onChange={handleTeam} required/></td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td><input type="text" name="seven" value={seven} onChange={handleTeam} required/></td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td><input type="text" name="eight" value={eight} onChange={handleTeam} required/></td>
-                </tr>
-              </tbody>
-            </table>
-            <button onClick={handleCreate}>Create</button>
-        </div>
+      <h1>ELITE EIGHT</h1>
+      <div className='table'>
+        <form onSubmit={handleCreate}>
+        <input className='nameBar' type="text" value={name} placeholder='name of the tourney...' required onChange={handleName} />
+          <table>
+            <thead>
+              <tr>
+                <th>S.no</th>
+                <th>Team</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><input type="text" name="one" value={one} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><input type="text" name="two" value={two} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><input type="text" name="three" value={three} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><input type="text" name="four" value={four} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><input type="text" name="five" value={five} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><input type="text" name="six" value={six} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><input type="text" name="seven" value={seven} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td><input type="text" name="eight" value={eight} onChange={handleTeam} required/></td>
+              </tr>
+            </tbody>
+          </table>
+          <button type='submit'>Create</button>
+        </form>
+      </div>
     </div>
   );
 };
