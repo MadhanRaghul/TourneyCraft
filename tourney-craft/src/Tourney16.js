@@ -187,44 +187,44 @@ const Tourney16 = () => {
       {sweet16Data ? (
         <>
           <h1>{sweet16Data.name}</h1>
-          <div className='container'>
+          <div className='container16'>
             <div className='cont'>
-              <div className='match' id='x1'>
+              <div className='match16' id='x1'>
                 <h2 onClick={handle9}>{sweet16Data.nine}</h2> <hr />
                 <h2 onClick={handle15}>{sweet16Data.fifteen}</h2>
               </div>
-              <div className='match' id='x2'>
+              <div className='match16' id='x2'>
                 <h2 onClick={handle4}>{sweet16Data.four}</h2> <hr />
                 <h2 onClick={handle12}>{sweet16Data.twelve}</h2>
               </div>
-              <div className='match' id='x3'>
+              <div className='match16' id='x3'>
                 <h2 onClick={handle7}>{sweet16Data.seven}</h2> <hr />
                 <h2 onClick={handle16}>{sweet16Data.sixteen}</h2>
               </div>
-              <div className='match' id='x4'>
+              <div className='match16' id='x4'>
                 <h2 onClick={handle2}>{sweet16Data.two}</h2> <hr />
                 <h2 onClick={handle10}>{sweet16Data.ten}</h2>
               </div>
             </div>
             <div className='cont'>
-              <div className='match' id='m1'>
+              <div className='match16' id='m1'>
                 <h2 onClick={handleX1}>{x1}</h2> <hr />
                 <h2 onClick={handleX2}>{x2}</h2>
               </div>
-              <div className='match' id='m2'>
+              <div className='match16' id='m2'>
                 <h2 onClick={handleX3}>{x3}</h2> <hr />
                 <h2 onClick={handleX4}>{x4}</h2>
               </div>
             </div>
             <div className='cont'>
-              <div className='match' id='s1'>
+              <div className='match16' id='s1'>
                 <h2 onClick={handleQ1}>{q1}</h2> <hr />
                 <h2 onClick={handleQ2}>{q2}</h2>
               </div>
             </div>
             <div className='cont'>
               <div
-                className='match'
+                className='match16'
                 id='finals'
                 onClick={
                   f1 !== 'TBD' && f2 !== 'TBD' ? handleFinalsClick : null
@@ -235,35 +235,35 @@ const Tourney16 = () => {
               </div>
             </div>
             <div className='cont'>
-              <div className='match' id='s2'>
+              <div className='match16' id='s2'>
                 <h2 onClick={handleQ3}>{q3}</h2> <hr />
                 <h2 onClick={handleQ4}>{q4}</h2>
               </div>
             </div>
             <div className='cont'>
-              <div className='match' id='m3'>
+              <div className='match16' id='m3'>
                 <h2 onClick={handleX5}>{x5}</h2> <hr />
                 <h2 onClick={handleX6}>{x6}</h2>
               </div>
-              <div className='match' id='m4'>
+              <div className='match16' id='m4'>
                 <h2 onClick={handleX7}>{x7}</h2> <hr />
                 <h2 onClick={handleX8}>{x8}</h2>
               </div>
             </div>
             <div className='cont'>
-              <div className='match' id='x5'>
+              <div className='match16' id='x5'>
                 <h2 onClick={handle3}>{sweet16Data.three}</h2> <hr />
                 <h2 onClick={handle14}>{sweet16Data.fourteen}</h2>
               </div>
-              <div className='match' id='x6'>
+              <div className='match16' id='x6'>
                 <h2 onClick={handle11}>{sweet16Data.eleven}</h2> <hr />
                 <h2 onClick={handle5}>{sweet16Data.five}</h2>
               </div>
-              <div className='match' id='x7'>
+              <div className='match16' id='x7'>
                 <h2 onClick={handle1}>{sweet16Data.one}</h2> <hr />
                 <h2 onClick={handle8}>{sweet16Data.eight}</h2>
               </div>
-              <div className='match' id='x8'>
+              <div className='match16' id='x8'>
                 <h2 onClick={handle13}>{sweet16Data.thirteen}</h2> <hr />
                 <h2 onClick={handle6}>{sweet16Data.six}</h2>
               </div>
@@ -282,8 +282,7 @@ const Tourney16 = () => {
               <h2>And the Winner is...</h2>
               <h1>{f1}</h1>
               <h2>CONGRATULATIONS!!</h2>
-              <img src='/party.gif' alt='' />
-              <img src='/Fireworks.gif' alt='' />
+              <img src='/party.gif' alt='' style={{height:'140vh'}} />
             </div>
           )}
           {showWinner2 && (
@@ -292,7 +291,6 @@ const Tourney16 = () => {
               <h1>{f2}</h1>
               <h2>CONGRATULATIONS!!</h2>
               <img src='/party.gif' alt='' />
-              <img src='/Fireworks.gif' alt='' />
             </div>
           )}
         </>

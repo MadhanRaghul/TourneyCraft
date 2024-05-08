@@ -8,13 +8,13 @@ body{
     margin: 0;
 }
 
-/* -------------------------- COMMON --------------------------------- */
+/* ---------------------------------- COMMON -------------------------------------- */
 
 a{
     text-decoration: none;
 }
 
-/* -------------------------- NAVBAR --------------------------------- */
+/* ---------------------------------- NAVBAR -------------------------------------- */
 
 .Navbar{
     width: 100vw;
@@ -68,7 +68,7 @@ a{
     color: transparent;
 }
 
-/* ------------------------------ CAROUSEL -------------------------------- */
+/* --------------------------------- CAROUSEL ----------------------------------- */
 
 .carousel-container {
     width: 100%;
@@ -255,14 +255,25 @@ a{
 /* -------------------------------- ELITE8 ----------------------------------- */
 
 .Elite8{
-    height: 120vh;
+    height: 100vh;
+    padding-top: 10vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(to top right, rgb(255, 93, 236), rgba(186, 88, 252, 0.223));
+}
 
+.Sweet16{
+    height: 160vh;
+    padding-top: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to top right, rgb(255, 93, 236), rgba(186, 88, 252, 0.223));
 }
 
 #nameBar{
@@ -303,7 +314,7 @@ a{
     width: max-content;
 }
 
-.Elite8 button{
+.Elite8 button,.Sweet16 button{
     font-size: 1.5em;
     padding: 1.5vh;
     border-style: none;
@@ -314,14 +325,14 @@ a{
     transition: all 0.2s;
 }
 
-.Elite8 button:hover{
+.Elite8 button:hover,.Sweet16 button:hover{
     background-color: white;
     color: black;
 }
 
 /* ------------------------------- TOURNEY8 ---------------------------------- */
 
-.Tourney8{
+.Tourney8, .Tourney16{
     height: 120vh;
     width: 100vw;
     display: flex;
@@ -329,11 +340,15 @@ a{
     flex-direction: column;
     align-items: center;
     color: rgb(0, 0, 0);
-    margin-top: 5vh;
+    padding-top: 5vh;
     background-image: linear-gradient(to top right, rgb(255, 93, 236), rgba(186, 88, 252, 0.223));
 }
 
-.container{
+.Tourney16{
+    height: 140vh;
+}
+
+.container,.container16{
     width: 80vw;
     display: flex;
     justify-content: center;
@@ -347,21 +362,25 @@ a{
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5) inset;
 }
 
+.container16{
+    height: 100vh;
+}
+
 .cont{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 70vh;
+    height: 90vh;
     justify-content: center;
     justify-content: space-evenly;
 }
 
-.match{
+.match, .match16{
     border-width: 4px;
     border-style: solid;
     border-image: linear-gradient(to right, rgb(255, 93, 236), rgb(186, 88, 252) ) 1;
-    height: 20vh;
-    width: 30vh;
+    height: 140px;
+    width: 200px;
     text-align: center;
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.473);
     cursor: pointer;
@@ -370,7 +389,11 @@ a{
     overflow: hidden;
 }
 
-.match::before{
+.match16{
+    scale: .9;
+}
+
+.match::before,.match16::before{
     content: '';
     position: absolute;
     width: 200px;
@@ -394,6 +417,11 @@ a{
 
 .match:hover{
     scale: 1.05;
+    box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.473);
+}
+
+.match16:hover{
+    scale: 1;
     box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.473);
 }
 
@@ -446,18 +474,15 @@ hr{
     animation-iteration-count: infinite, 1;
     animation-fill-mode: none, forwards;
     animation-delay: 1s, 0s;
-    background-image: linear-gradient(to top right, rgba(255, 93, 236, 0.437), rgba(229, 118, 253, 0.372));
-    backdrop-filter: blur(10px); /* Apply blur effect */
-
+    background-image: linear-gradient(to top right, rgb(255, 93, 236), rgb(228, 118, 253));
 }
 
 .winner img{
     position: absolute;
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     opacity: 1;
 }
-
 
 @keyframes animeWinner{
     0%{
@@ -486,6 +511,23 @@ hr{
     }
 }
 
+/* width */
 ::-webkit-scrollbar {
-    width: 0px;
-}
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e96aff; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bf0fff; 
+  }

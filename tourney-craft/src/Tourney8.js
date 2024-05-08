@@ -158,7 +158,6 @@ const Tourney8 = () => {
               <h1>{f1}</h1>
               <h2>CONGRATULATIONS!!</h2>
               <img src="/party.gif" alt="" />
-              <img src="/Fireworks.gif" alt="" />
             </div>
           )}
 
@@ -168,7 +167,6 @@ const Tourney8 = () => {
               <h1>{f2}</h1>
               <h2>CONGRATULATIONS!!</h2>
               <img src="/party.gif" alt="" />
-              <img src="/Fireworks.gif" alt="" />
             </div>
           )}
           

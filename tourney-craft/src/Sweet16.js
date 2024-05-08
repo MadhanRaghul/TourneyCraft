@@ -84,6 +84,14 @@ const Sweet16 = () => {
   const handleCreate = (event) => {
     event.preventDefault(); // Prevent default form submission
     // Clear localStorage for q1, q2, q3, q4, f1, and f2
+    localStorage.removeItem('x1');
+    localStorage.removeItem('x2');
+    localStorage.removeItem('x3');
+    localStorage.removeItem('x4');
+    localStorage.removeItem('x5');
+    localStorage.removeItem('x6');
+    localStorage.removeItem('x7');
+    localStorage.removeItem('x8');
     localStorage.removeItem('q1');
     localStorage.removeItem('q2');
     localStorage.removeItem('q3');
@@ -97,8 +105,8 @@ const Sweet16 = () => {
   };
 
   return (
-    <div className='Elite8'>
-      <h1>ELITE EIGHT</h1>
+    <div className='Sweet16'>
+      <h1>SWEET SIXTEEN</h1>
       <div className='table'>
         <form id='theForm' onSubmit={handleCreate}>
         <input id='nameBar' type="text" value={name} placeholder='name of the tourney...' required onChange={handleName} />

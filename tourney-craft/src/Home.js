@@ -16,8 +16,8 @@ const Home = () => {
                 <Cards image = '/sweet16.jpg'
                        type = 'Average sized tourney for long matches'
                        link = 'Sweet16' />
-                <Cards image = '/sweet16.jpg'
-                       type = 'Coming soon' />
+                <Cards image = '/coming-soon.jpg'
+                       type = '32 Teams Matchup' />
             </div>
             
             <div className='description'>
