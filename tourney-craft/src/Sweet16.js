@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Elite8 = () => {
+const Sweet16 = () => {
   const [one, setOne] = useState("");
   const [two, setTwo] = useState("");
   const [three, setThree] = useState("");
@@ -10,6 +10,14 @@ const Elite8 = () => {
   const [six, setSix] = useState("");
   const [seven, setSeven] = useState("");
   const [eight, setEight] = useState("");
+  const [nine, setNine] = useState("");
+  const [ten, setTen] = useState("");
+  const [eleven, setEleven] = useState("");
+  const [twelve, setTwelve] = useState("");
+  const [thirteen, setThirteen] = useState("");
+  const [fourteen, setFourteen] = useState("");
+  const [fifteen, setFifteen] = useState("");
+  const [sixteen, setSixteen] = useState("");
   const [name, setName] = useState("");
   const navigate = useNavigate();
 
@@ -44,6 +52,30 @@ const Elite8 = () => {
       case "eight":
         setEight(value);
         break;
+      case "nine":
+        setNine(value);
+        break;
+      case "ten":
+        setTen(value);
+        break;
+      case "eleven":
+        setEleven(value);
+        break;
+      case "twelve":
+        setTwelve(value);
+        break;
+      case "thirteen":
+        setThirteen(value);
+        break;
+      case "fourteen":
+        setFourteen(value);
+        break;
+      case "fifteen":
+        setFifteen(value);
+        break;
+      case "sixteen":
+        setSixteen(value);
+        break;
       default:
         break;
     }
@@ -59,9 +91,9 @@ const Elite8 = () => {
     localStorage.removeItem('f1');
     localStorage.removeItem('f2');
 
-    const elite8Data = { name, one, two, three, four, five, six, seven, eight };
-    localStorage.setItem('elite8Data', JSON.stringify(elite8Data));
-    navigate('/tourney8');
+    const sweet16Data = { name, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen };
+    localStorage.setItem('sweet16Data', JSON.stringify(sweet16Data));
+    navigate('/tourney16');
   };
 
   return (
@@ -110,6 +142,38 @@ const Elite8 = () => {
                 <td>8</td>
                 <td><input type="text" name="eight" value={eight} onChange={handleTeam} required/></td>
               </tr>
+              <tr>
+                <td>9</td>
+                <td><input type="text" name="nine" value={nine} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td><input type="text" name="ten" value={ten} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td><input type="text" name="eleven" value={eleven} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td><input type="text" name="twelve" value={twelve} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td><input type="text" name="thirteen" value={thirteen} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td><input type="text" name="fourteen" value={fourteen} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td><input type="text" name="fifteen" value={fifteen} onChange={handleTeam} required/></td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td><input type="text" name="sixteen" value={sixteen} onChange={handleTeam} required/></td>
+              </tr>
             </tbody>
           </table>
           <button type='submit'>Create</button>
@@ -119,4 +183,4 @@ const Elite8 = () => {
   );
 };
 
-export default Elite8;
+export default Sweet16;

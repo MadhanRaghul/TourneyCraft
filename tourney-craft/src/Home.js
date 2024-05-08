@@ -1,6 +1,5 @@
 import React from 'react'
 import Cards from './Cards'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -12,9 +11,11 @@ const Home = () => {
 
             <div className='cards'>
                 <Cards image = '/elite8.jpg'
-                       type = ' Fast paced Short and Simple tourney!' />
+                       type = ' Fast paced Short and Simple tourney!'
+                       link = '/Elite8' />
                 <Cards image = '/sweet16.jpg'
-                       type = 'Average sized tourney for long matches' />
+                       type = 'Average sized tourney for long matches'
+                       link = 'Sweet16' />
                 <Cards image = '/sweet16.jpg'
                        type = 'Coming soon' />
             </div>

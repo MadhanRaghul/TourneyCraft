@@ -7,7 +7,7 @@ const Cards = (props) => {
         <div className='cardHolder'>
           <img src={props.image} alt="cant load the image" />
           <h3>{props.type}</h3>
-          <Link to="/Elite8">Create!</Link>
+          <Link to={props.link}>Create!</Link>
         </div>
     </div>
   )

@@ -1,6 +1,5 @@
 import React from 'react';
 import Welcome from './Welcome';
-import Elite8 from './Elite8';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -12,6 +11,12 @@ const Navbar = () => {
     const homeElement = document.getElementById('create');
     if (homeElement) {
       homeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const scrollToContact = () => {
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -27,7 +32,9 @@ const Navbar = () => {
                     <Link to="" onClick={scrollToHome}>Create</Link>
                   )}
                   <Link to="">Tourneys</Link>
-                  <Link to="">Contact</Link>
+                  {location.pathname === "/" && (
+                    <Link to="" onClick={scrollToContact}>Contact</Link>
+                  )}
               </div>
           </div>
       </div>
