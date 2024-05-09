@@ -20,9 +20,6 @@ const Carousel = () => {
           <img key={index} src={image} alt={`Image ${index + 1}`} className="carousel-image" />
         ))}
       </div>
-      <div className='greet'>
-        <h2>Scroll down and create your own brackets!</h2>
-      </div>
     </div>
   )
 }
