@@ -10,13 +10,12 @@ const Tourney8 = () => {
   const [f1, setF1] = useState(localStorage.getItem('f1') || 'TBD');
   const [f2, setF2] = useState(localStorage.getItem('f2') || 'TBD');
 
-  const [showPops, setShowPops] = useState(false); // State to control visibility of pops div
-  const [showWinner1, setShowWinner1] = useState(false); // State to control visibility of pops div
-  const [showWinner2, setShowWinner2] = useState(false); // State to control visibility of pops div
+  const [showPops, setShowPops] = useState(false);
+  const [showWinner1, setShowWinner1] = useState(false);
+  const [showWinner2, setShowWinner2] = useState(false);
 
 
   useEffect(() => {
-    // Retrieve data from localStorage
     const storedData = JSON.parse(localStorage.getItem('elite8Data'));
     if (storedData) {
       setElite8Data(storedData);
@@ -86,15 +85,15 @@ const Tourney8 = () => {
   };
 
   const handleFinalsClick = () => {
-    setShowPops(true); // Set showPops state to true when finals div is clicked
+    setShowPops(true);
   };
 
   const handleWinner1 = () => {
-    setShowWinner1(true); // Set showPops state to true when finals div is clicked
+    setShowWinner1(true);
   };
 
   const handleWinner2 = () => {
-    setShowWinner2(true); // Set showPops state to true when finals div is clicked
+    setShowWinner2(true);
   };
 
   return (

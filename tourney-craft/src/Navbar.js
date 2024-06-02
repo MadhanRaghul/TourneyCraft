@@ -3,10 +3,8 @@ import Welcome from './Welcome';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  // Get the current location
   const location = useLocation();
 
-  // Function to handle scrolling to the Home component
   const scrollToHome = () => {
     const homeElement = document.getElementById('create');
     if (homeElement) {
@@ -26,7 +24,6 @@ const Navbar = () => {
           <div className='actualNavbar'>
               <img src="/logo.png" alt="TourneyCraft Logo" />
               <div className='navLinks'>
-                  {/* Conditionally render the Create link based on the current location */}
                   <Link to="/">Home</Link>
                   {location.pathname === "/" && (
                     <Link to="" onClick={scrollToHome}>Create</Link>

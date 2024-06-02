@@ -50,8 +50,7 @@ const Elite8 = () => {
   };
 
   const handleCreate = (event) => {
-    event.preventDefault(); // Prevent default form submission
-    // Clear localStorage for q1, q2, q3, q4, f1, and f2
+    event.preventDefault();
     localStorage.removeItem('q1');
     localStorage.removeItem('q2');
     localStorage.removeItem('q3');
@@ -69,7 +68,7 @@ const Elite8 = () => {
       <h1>ELITE EIGHT</h1>
       <div className='table'>
         <form id='theForm' onSubmit={handleCreate}>
-        <input id='nameBar' type="text" value={name} placeholder='name of the tourney...' required onChange={handleName} />
+        <input id='nameBar' type="text" value={name} placeholder='Name of the tourney...' required onChange={handleName} />
           <table>
             <thead>
               <tr>
@@ -80,35 +79,35 @@ const Elite8 = () => {
             <tbody>
               <tr>
                 <td>1</td>
-                <td><input type="text" name="one" value={one} onChange={handleTeam} required/></td>
+                <td><input type="text" name="one" value={one} onChange={handleTeam} maxLength={15} required/></td>
               </tr>
               <tr>
                 <td>2</td>
-                <td><input type="text" name="two" value={two} onChange={handleTeam} required/></td>
+                <td><input type="text" name="two" value={two} onChange={handleTeam} maxLength={15} required/></td>
               </tr>
               <tr>
                 <td>3</td>
-                <td><input type="text" name="three" value={three} onChange={handleTeam} required/></td>
+                <td><input type="text" name="three" value={three} onChange={handleTeam} maxLength={15} required/></td>
               </tr>
               <tr>
                 <td>4</td>
-                <td><input type="text" name="four" value={four} onChange={handleTeam} required/></td>
+                <td><input type="text" name="four" value={four} onChange={handleTeam} maxLength={15} required/></td>
               </tr>
               <tr>
                 <td>5</td>
-                <td><input type="text" name="five" value={five} onChange={handleTeam} required/></td>
+                <td><input type="text" name="five" value={five} onChange={handleTeam} maxLength={15} required/></td>
               </tr>
               <tr>
                 <td>6</td>
-                <td><input type="text" name="six" value={six} onChange={handleTeam} required/></td>
+                <td><input type="text" name="six" value={six} onChange={handleTeam} maxLength={15} required/></td>
               </tr>
               <tr>
                 <td>7</td>
-                <td><input type="text" name="seven" value={seven} onChange={handleTeam} required/></td>
+                <td><input type="text" name="seven" value={seven} onChange={handleTeam} maxLength={15} required/></td>
               </tr>
               <tr>
                 <td>8</td>
-                <td><input type="text" name="eight" value={eight} onChange={handleTeam} required/></td>
+                <td><input type="text" name="eight" value={eight} onChange={handleTeam} maxLength={15} required/></td>
               </tr>
             </tbody>
           </table>
